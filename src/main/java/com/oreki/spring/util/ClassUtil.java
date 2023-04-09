@@ -1,9 +1,10 @@
-package com.oreki.util;
+package com.oreki.spring.util;
 
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.annotation.Annotation;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.net.URL;
@@ -128,5 +129,15 @@ public class ClassUtil {
             throw new RuntimeException(e);
         }
     }
+
+    public static boolean isAnyAnnotationPresent(Class<?> clazz, Class<? extends Annotation>... annotationClass) {
+        for (Class<? extends Annotation> annotation : annotationClass) {
+            if (clazz.isAnnotationPresent(annotation)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 
 }

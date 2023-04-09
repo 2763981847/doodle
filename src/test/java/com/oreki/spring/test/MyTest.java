@@ -1,9 +1,9 @@
-package com.oreki.test;
+package com.oreki.spring.test;
 
-import com.oreki.bean.config.SpringConfig;
-import com.oreki.bean.controller.UserController;
-import com.oreki.ioc.ApplicationContext;
-import com.oreki.util.ClassUtil;
+import com.oreki.spring.bean.config.SpringConfig;
+import com.oreki.spring.bean.controller.UserController;
+import com.oreki.spring.ioc.ApplicationContext;
+import com.oreki.spring.util.ClassUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
@@ -20,6 +20,7 @@ import java.util.Set;
  */
 @Slf4j
 public class MyTest {
+
     @Test
     public void testIoc() {
         ApplicationContext applicationContext = new ApplicationContext(SpringConfig.class);

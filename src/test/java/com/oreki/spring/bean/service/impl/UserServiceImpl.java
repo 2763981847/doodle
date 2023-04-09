@@ -1,8 +1,7 @@
-package com.oreki.bean.service.impl;
+package com.oreki.spring.bean.service.impl;
 
-import com.oreki.bean.service.UserService;
-import com.oreki.core.annotation.Component;
-import com.oreki.core.annotation.Service;
+import com.oreki.spring.bean.service.UserService;
+import com.oreki.spring.core.annotation.Service;
 
 /**
  * @author : Fu QiuJie

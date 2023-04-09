@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.oreki</groupId>
+    <groupId>cn.autumnclouds.sping</groupId>
     <artifactId>my-spring</artifactId>
     <version>1.0-SNAPSHOT</version>
 
@@ -15,6 +15,7 @@
         <slf4j-api.version>1.7.25</slf4j-api.version>
         <lombok.version>1.16.20</lombok.version>
         <hutool.version>5.7.17</hutool.version>
+        <cglib.version>3.2.6</cglib.version>
     </properties>
     <dependencies>
         <!-- SLF4J -->
@@ -30,12 +31,6 @@
             <version>${lombok.version}</version>
             <scope>provided</scope>
         </dependency>
-        <!--hutool-->
-        <dependency>
-            <groupId>cn.hutool</groupId>
-            <artifactId>hutool-all</artifactId>
-            <version>${hutool.version}</version>
-        </dependency>
         <dependency>
             <groupId>org.jetbrains</groupId>
             <artifactId>annotations</artifactId>
@@ -48,6 +43,12 @@
             <artifactId>junit</artifactId>
             <version>4.13.2</version>
             <scope>test</scope>
+        </dependency>
+        <!-- cglib -->
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib</artifactId>
+            <version>${cglib.version}</version>
         </dependency>
     </dependencies>
 </project>

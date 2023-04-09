@@ -1,11 +1,11 @@
-package com.oreki.core;
+package com.oreki.spring.core;
 
 
-import com.oreki.core.annotation.Component;
-import com.oreki.core.annotation.Controller;
-import com.oreki.core.annotation.Repository;
-import com.oreki.core.annotation.Service;
-import com.oreki.util.ClassUtil;
+import com.oreki.spring.core.annotation.Component;
+import com.oreki.spring.core.annotation.Controller;
+import com.oreki.spring.core.annotation.Repository;
+import com.oreki.spring.core.annotation.Service;
+import com.oreki.spring.util.ClassUtil;
 import lombok.extern.slf4j.Slf4j;
 
 import java.lang.annotation.Annotation;
@@ -75,10 +75,7 @@ public class BeanContainer {
             throw new RuntimeException("load bean error");
         }
         classSet.stream()
-                .filter(clazz -> clazz.isAnnotationPresent(Component.class)
-                        || clazz.isAnnotationPresent(Controller.class)
-                        || clazz.isAnnotationPresent(Service.class)
-                        || clazz.isAnnotationPresent(Repository.class))
+                .filter(clazz -> ClassUtil.isAnyAnnotationPresent(clazz, Component.class, Controller.class, Service.class, Repository.class))
                 .forEach(clazz -> beanMap.put(clazz, ClassUtil.newInstance(clazz)));
     }
 

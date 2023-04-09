@@ -1,4 +1,4 @@
-package com.oreki.core.annotation;
+package com.oreki.spring.ioc.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -7,10 +7,9 @@ import java.lang.annotation.Target;
 
 /**
  * @author : Fu QiuJie
- * @since : 2022/12/20 15:22
+ * @since : 2022/12/22 15:05
  */
-@Target(ElementType.TYPE)
+@Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
-@Component
-public @interface Service {
+public @interface Autowired {
 }

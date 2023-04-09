@@ -1,4 +1,4 @@
-package com.oreki.core.annotation;
+package com.oreki.spring.core.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
